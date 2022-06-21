@@ -164,7 +164,7 @@ RUN \
     useradd --user-group --system --home-dir /home/wekan wekan && \
     \
     # OS dependencies
-    apt-get update -y && apt-get install -y --no-install-recommends ${BUILD_DEPS} && \
+    apt-get update -y && apt-get dist-upgrade -y && apt-get install -y --no-install-recommends ${BUILD_DEPS} && \
     #pip3 install -U pip setuptools wheel && \
     \
     # Meteor installer doesn't work with the default tar binary, so using bsdtar while installing.
